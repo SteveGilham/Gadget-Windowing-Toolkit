@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>TestGadget</title>
+</head>
+<body>
+<font face="Arial,Helvetica">
+<!--
+	Figure out if this is Netscape Communicator or not.  If so, use the
+	Jar file (allowing us to sign it and compress it too!)
+-->
+
+<center>
+<img src="gwtlogo.gif">
+</center>
+<hr size=1>
+<blockquote>
+<script language="JavaScript">
+	version = navigator.appVersion.substring(0, navigator.appVersion.indexOf("."));
+	if (navigator.appName == "Netscape" && version >= 4) {
+		document.writeln("You are running in Netscape Communicator or later.<p>");
+		document.writeln("<center>" + 
+				 "<table border=2 cellpadding=0 cellspacing=0><tr><td>" +
+				 "<applet codebase=\".\" archive=\"gwt.jar\" "+
+				 "code=\"TestGadget.class\" width=600 height=500>");
+	} else {
+		document.writeln("Your browser knows JavaScript, but "+
+				 "you are NOT running in Netscape Communicator or later.<p>");
+		document.writeln("<center>" +
+				 "<table border=2 cellpadding=0 cellspacing=0><tr><td>" +
+				 "<applet codebase=\".\" archive=\"gwt.zip\" "+
+				 "code=\"TestGadget.class\" height=500 width=600>");
+	}
+/*
+You are NOT running in Netscape Communicator or later, and your browser
+does not understand JavaScript.<p>
+<applet codebase="." archive="gwt.zip" code="TestGadget.class" height=500 width=600>
+*/
+</script>
+<param name="cabbase" value="gwt.cab">
+</applet></td></tr></table>
+</center>
+<h3>Note: You can also run this as an application (because it uses the
+"AppletManager") by typing "java TestGadget -f simple.html"</h3>
+</blockquote>
+
+</font>
+<hr size=1>
+<center>
+<font face="Arial,Helvetica" size=-1>
+<nobr>
+<a href="http://www.dtai.com/products/gwt/" target="_top">GWT</a>
+</nobr>
+</font>
+
+<p>
+<font  size=-1>
+Copyright &copy; 1997 by DTAI Incorporated
+</font>
+</center>
+
+</body>
+</html>
